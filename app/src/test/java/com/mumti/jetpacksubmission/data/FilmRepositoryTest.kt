@@ -18,7 +18,6 @@ import com.nhaarman.mockitokotlin2.verify
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
-import org.mockito.Mockito
 import org.mockito.Mockito.*
 
 class FilmRepositoryTest {

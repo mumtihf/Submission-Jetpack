@@ -12,7 +12,6 @@ import com.mumti.jetpacksubmission.R
 import com.mumti.jetpacksubmission.data.local.entity.MovieEntity
 import com.mumti.jetpacksubmission.databinding.ItemsFilmBinding
 import com.mumti.jetpacksubmission.ui.detail.DetailFilmActivity
-import java.util.ArrayList
 
 class MovieAdapter(private val callback: MovieFragmentCallback) : PagedListAdapter<MovieEntity, MovieAdapter.MovieViewHolder>(DIFF_CALLBACK) {
 

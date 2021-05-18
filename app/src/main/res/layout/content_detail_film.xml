@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_favorite"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/favorite" />
 
         <ImageView
             android:id="@+id/image_poster"

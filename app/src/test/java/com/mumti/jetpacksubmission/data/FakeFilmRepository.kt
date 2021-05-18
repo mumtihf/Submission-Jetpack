@@ -1,7 +1,6 @@
 package com.mumti.jetpacksubmission.data
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.mumti.jetpacksubmission.data.local.LocalDataSource
@@ -38,9 +37,9 @@ class FakeFilmRepository(
             public override fun createCall(): LiveData<ApiResponse<List<MovieResponse>>> =
                 remoteDataSource.getAllMovies()
 
-            public override fun saveCallResult(movieResponses: List<MovieResponse>) {
+            public override fun saveCallResult(data: List<MovieResponse>) {
                 val movieList = ArrayList<MovieEntity>()
-                for (response in movieResponses) {
+                for (response in data) {
                     val movie = MovieEntity(
                         response.filmId,
                         response.title,
@@ -74,9 +73,9 @@ class FakeFilmRepository(
             public override fun createCall(): LiveData<ApiResponse<List<TvResponse>>> =
                 remoteDataSource.getAllTvShows()
 
-            public override fun saveCallResult(tvResponses: List<TvResponse>) {
+            public override fun saveCallResult(data: List<TvResponse>) {
                 val tvList = ArrayList<TvEntity>()
-                for (response in tvResponses) {
+                for (response in data) {
                     val tv = TvEntity(
                         response.filmId,
                         response.title,
@@ -104,9 +103,9 @@ class FakeFilmRepository(
             override fun createCall(): LiveData<ApiResponse<List<MovieResponse>>> =
                 remoteDataSource.getDetailMovie(filmId)
 
-            override fun saveCallResult(movieResponses: List<MovieResponse>) {
+            override fun saveCallResult(data: List<MovieResponse>) {
                 val movieList = ArrayList<MovieEntity>()
-                for (response in movieResponses) {
+                for (response in data) {
                     if (response.filmId == filmId) {
                         val movie = MovieEntity(
                             response.filmId,
@@ -137,9 +136,9 @@ class FakeFilmRepository(
             override fun createCall(): LiveData<ApiResponse<List<TvResponse>>> =
                 remoteDataSource.getDetailTvShow(filmId)
 
-            override fun saveCallResult(tvResponses: List<TvResponse>) {
+            override fun saveCallResult(data: List<TvResponse>) {
                 val tvList = ArrayList<TvEntity>()
-                for (response in tvResponses) {
+                for (response in data) {
                     if (response.filmId == filmId) {
                         val tv = TvEntity(
                             response.filmId,

@@ -4,12 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.mumti.jetpacksubmission.R
 import com.mumti.jetpacksubmission.databinding.FragmentFavoriteBinding
 
 class FavoriteFragment : Fragment() {
@@ -20,7 +15,7 @@ class FavoriteFragment : Fragment() {
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         favoriteBinding = FragmentFavoriteBinding.inflate(inflater, container, false)
         return favoriteBinding.root
     }
